@@ -1,0 +1,53 @@
+<ion-view view-title="Add Category or Item">
+  <ion-content>
+  <form ng-submit="doAdd()">
+      <div class="list">
+        <label class="item item-divider"><b>New category</b></label>
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="addCategory.name">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Description</span>
+          <input type="text" ng-model="addCategory.description">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Thumb</span>
+          <input type="text" ng-model="addCategory.thumb">
+        </label>
+        <label class="item">
+          <button class="button button-block button-stable" type="submit" ng-click="insert(addCategory)">Add category</button>
+        </label>
+      </div>
+    </form>
+      <form>
+      <div class="list">
+        <label class="item item-divider"><b>New Item</b></label>
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="addItem.name">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Description</span>
+          <input type="text" ng-model="addItem.description">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Video</span>
+          <input type="text" ng-model="addItem.video">
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Category
+          <select ng-model="addItem.category_id">
+            <option ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
+          </select>
+          </div>
+        </label>
+        <label class="item">
+          <button class="button button-block button-stable" type="submit" ng-click="insertItem(addItem)">Add item</button>
+        </label>
+        <img id="myImage">
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

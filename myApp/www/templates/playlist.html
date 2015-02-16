@@ -1,0 +1,12 @@
+<ion-view view-title="{{idCtrl.playlistTitle}}">
+  <ion-content>
+    
+    <div class="list" >
+        <a class="item item-thumbnail-left" ng-repeat="detail in details" ng-click="det(detail.user, detail.src, detail.category, detail.description)">
+          <img src="{{detail.src}}">
+          <h2>{{detail.user}}</h2>
+          <p>{{detail.category}}</p>
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view view-title="Category {{categoryTitle}}">
+  <ion-content>
+    
+    <div class="list" >
+        <a class="item item-thumbnail-left" ng-repeat="item in items" ng-click="detRest(item.id, item.name, item. description)">
+          <img src="{{item.video}}">
+          <h2>{{item.name}}</h2>
+          <p>{{item.description}}</p>
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

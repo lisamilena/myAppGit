@@ -1,0 +1,11 @@
+<ion-view view-title="Categories REST">
+  <ion-content>
+	  	<div class="list">    
+		    <ion-item class="item item-thumbnail-left" ng-repeat="category in categories" href="#/app/browse/{{category.id}}">
+		    	<img src="img/foto1.jpg"><!--<img src="{{category.thumb}}"> -->
+		        <h2>{{category.name}}</h2>
+		        <p>{{category.description}}</p>
+		    </ion-item>
+		</div>
+  </ion-content>
+</ion-view>

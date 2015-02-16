@@ -1,0 +1,35 @@
+<ion-view view-title="Add new image">
+  <ion-content>
+     <form ng-submit="doAdd()">
+      <div class="list">
+      <button class="button icon-left ion-camera button-full button-dark" ng-click="getPicture()">Take a picture</button>
+      <div class="item item-image">
+        <img id="myImage" >
+      </div>
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="addData.name">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Label</span>
+          <input type="text" ng-model="addData.label">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Content</span>
+          <input type="text" ng-model="addData.content">
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Item
+          <select ng-model="addData.item_id">
+            <option ng-repeat="item in items" value="{{item.id}}" selected="">{{item.name}}</option>
+          </select>
+          </div>
+        </label>
+        <label class="item">
+          <button class="button button-block button-stable" type="submit" ng-click="upImage(addData)">Add</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

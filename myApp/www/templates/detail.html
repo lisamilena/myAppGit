@@ -1,0 +1,39 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">{{details.use}}</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeDetail()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content> 
+    <div class="list card">
+
+  <div class="item item-avatar">
+    <h2>{{details.cat}}</h2>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="{{details.src}}">
+    <p>
+      {{details.des}}
+    </p>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#">
+      <i class="icon ion-star"></i>
+      Like
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-chatbox-working"></i>
+      Comment
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-paper-airplane"></i>
+      Share
+    </a>
+  </div>
+
+</div>
+  </ion-content>
+</ion-modal-view>
